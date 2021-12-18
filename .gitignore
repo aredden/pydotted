@@ -1,3 +1,7 @@
-# Build pacakges
+# Cache
 __pycache__
+
+# Build files
+pydotdict.egg-info
 build
+dist
