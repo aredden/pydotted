@@ -4,8 +4,14 @@ A very simple low code footprint dictionary with dot notation attribute (x.y) ac
 
 ## Installation:
 
+<strong> From git: </strong>
 ```bash
 pip install git+https://github.com/aredden/pydotted.git
+```
+
+<strong>From pypi:</strong>
+```bash
+pip install pydotted
 ```
 
 ## Examples & Usage:
