@@ -1,14 +1,20 @@
-# Pydotdict
+# PyDotted
 
-A dictionary that can get attribute (x.y) access, including nested dicts.
+A very simple low code footprint dictionary with dot notation attribute (x.y) access, including nested dicts.
 
-## Examples:
+## Installation:
+
+```bash
+pip install git+https://github.com/aredden/pydotted.git
+```
+
+## Examples & Usage:
 
 ```python
 
-from pydotdict import dotdict
+from pydotted import pydot
 
-d = dotdict({"a": 1})
+d = pydot({"a": 1})
 
 print(d.a)
 # prints 1

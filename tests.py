@@ -1,6 +1,6 @@
-from pydotdict import dotdict
+from pydotted import pydot
 
-d = dotdict({"a": 1})
+d = pydot({"a": 1})
 
 print(d.a)
 # prints 1
@@ -22,3 +22,10 @@ d.a = {"e": {"f": {"h": {"i": "j"}}}}
 
 print(d.a.e.f.h.i)
 # prints "j"
+
+
+# Still supports normal dictionary property access
+d["a"] = 20
+
+print(d.a)
+# prints 20
