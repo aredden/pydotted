@@ -2,6 +2,9 @@
 __pycache__
 
 # Build files
-pydotdict.egg-info
+pydotted.egg-info
 build
 dist
+
+# VSCode files
+.vscode
