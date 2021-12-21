@@ -17,7 +17,6 @@ pip install pydotted
 ## Examples & Usage:
 
 ```python
-
 from pydotted import pydot
 
 d = pydot({"a": 1})
@@ -42,5 +41,18 @@ d.a = {"e": {"f": {"h": {"i": "j"}}}}
 
 print(d.a.e.f.h.i)
 # prints "j"
+
+
+# Still supports normal dictionary property access
+d["j"] = 20
+
+print(d.j)
+# prints 20
+
+d.a.e.f.h.i = [{"a": {"b": "c"}}]
+
+# Supports nested arrays within dictionaries within arrays, (etc...) :)
+print(d.a.e.f.h.i[0].a.b)
+# prints "c"
 
 ```
