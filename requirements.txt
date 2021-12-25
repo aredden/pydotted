@@ -1,0 +1,4 @@
+pytest
+setuptools
+pytest-cov
+coverage-badge

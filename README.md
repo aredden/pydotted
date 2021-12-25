@@ -1,5 +1,7 @@
 # PyDotted
 
+![coverage](./coverage.svg)
+
 A very simple low code footprint dictionary with dot notation attribute (x.y) access, including nested dicts.
 
 ## Installation:
@@ -54,5 +56,10 @@ d.a.e.f.h.i = [{"a": {"b": "c"}}]
 # Supports nested arrays within dictionaries within arrays, (etc...) :)
 print(d.a.e.f.h.i[0].a.b)
 # prints "c"
+
+# Supports deeply nested arrays
+d.b = [[[[[{"a":{"b":1}}]]]]]
+print(d.b[0][0][0][0][0].a.b)
+# prints 1
 
 ```

@@ -8,3 +8,8 @@ dist
 
 # VSCode files
 .vscode
+
+# Code coverage reports
+.coverage
+coverage.xml
+htmlcov
