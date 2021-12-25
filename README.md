@@ -1,6 +1,6 @@
 # PyDotted
 
-![coverage](./coverage.svg)
+![coverage](https://github.com/aredden/pydotted/blob/main/coverage.svg)
 
 A very simple low code footprint dictionary with dot notation attribute (x.y) access, including nested dicts.
 

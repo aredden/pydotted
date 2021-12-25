@@ -12,7 +12,7 @@ class pydot(dict):
         for k,v in self.items():
             self.__setattr__(k, v)
 
-    def __check_nested_list(self, __list): # TODO:
+    def __check_nested_list(self, __list):
         if len(__list) == 0:
             return __list
         for i,_item in enumerate(__list):
