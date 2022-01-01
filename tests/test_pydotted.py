@@ -54,3 +54,18 @@ def test_deeply_nested_dict_to_pydot(d):
 def test_fail_on_non_dict():
     with pytest.raises(TypeError):
         pydot([])
+        
+def test_pass_on_empty():
+    pydot()
+    
+def test_fail_multiarg():
+    with pytest.raises(TypeError):
+        a = 1
+        b = 2
+        pydot(a,b)
+        
+def test_pass_kwargs():
+    p = pydot(name="pydot",arr=[0,1,2,3,4,5],nested={"a":{"b":{"c":{"d":{"e":{"f":1}}}}}})
+    assert p.arr == [0,1,2,3,4,5], "keys/names couldn't be passed as kwargs."
+    assert p.name == "pydot", "keys/names couldn't be passed as kwargs."
+    assert p.nested.a.b.c.d.e.f == 1, "keys/names couldn't be passed as kwargs."

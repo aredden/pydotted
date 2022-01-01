@@ -5,14 +5,17 @@ class pydot(dict):
     A dictionary that can get attribute (x.y) access, including nested dicts.
     """
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> 'pydot':
         dict.__init__(self, *args, **kwargs)
-        if type(*args) == list:
+        # Dict will always throw error if num args > 1, so we are safe to 
+        # check if there is only one type of arg.
+        args = args[0] if type(args) == tuple and len(args) == 1 else args
+        if type(args) == list:
             raise TypeError("Cannot instantiate a pydot with list as argument.")
         for k,v in self.items():
             self.__setattr__(k, v)
 
-    def __check_nested_list(self, __list):
+    def __check_nested_list(self, __list: list) -> list:
         if len(__list) == 0:
             return __list
         for i,_item in enumerate(__list):
