@@ -53,13 +53,18 @@ print(d.j)
 
 d.a.e.f.h.i = [{"a": {"b": "c"}}]
 
-# Supports nested arrays within dictionaries within arrays, (etc...) :)
+# Supports nested lists within dictionaries within lists, (etc...) :)
 print(d.a.e.f.h.i[0].a.b)
 # prints "c"
 
-# Supports deeply nested arrays
+# Supports deeply nested lists
 d.b = [[[[[{"a":{"b":1}}]]]]]
 print(d.b[0][0][0][0][0].a.b)
 # prints 1
 
 ```
+
+### Updates as of 1/8/22
+
+**New Method:** `todict()`
+> Returns a non-pydot dictionary containing the converted object and nested objects.
